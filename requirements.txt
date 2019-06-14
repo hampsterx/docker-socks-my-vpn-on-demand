@@ -1,0 +1,9 @@
+python-dotenv==0.9.1
+async-timeout==3.0.1
+pydantic==0.21
+fastapi==0.11.0
+uvicorn==0.6.1
+asocks==0.1.0
+coloredlogs==10.0
+janus==0.3.2
+aiofiles==0.4.0

@@ -1,0 +1,15 @@
+*.egg-info
+*.pyc
+build/
+dist/
+.env
+__pycache__
+.coverage
+.DS_Store
+htmlcov/
+.cache/
+.idea
+
+notes.txt
+
+client.ovpn

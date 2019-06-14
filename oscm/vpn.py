@@ -114,3 +114,7 @@ class VPN:
             await asyncio.sleep(1)
 
         return False
+
+    async def stop(self):
+        # todo send Sigterm or use management service to halt it cleanly
+        pass

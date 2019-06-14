@@ -14,7 +14,7 @@ def shutdown(wait_seconds, before_shutdown, _signo, _stack_frame):
 
     if before_shutdown:
         log.debug("Calling before_shutdown function..")
-        before_shutdown()
+        await before_shutdown()
 
     thread = threading.Thread(target=lambda: time.sleep(wait_seconds))
     thread.start()

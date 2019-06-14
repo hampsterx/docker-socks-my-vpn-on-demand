@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+
+  oscm:
+     container_name: oscm
+     env_file:
+      - .env
+     build:
+       context: .
+       dockerfile: Dockerfile
+     volumes:
+        - ./client.ovpn:/app/client.ovpn
+     devices:
+        - /dev/net/tun:/dev/net/tun
+        - /dev/tty:/dev/tty
+     cap_add:
+      - NET_ADMIN
+     ports:
+      - target: 8080
+        published: 8080
+      - target: 8081
+        published: 8081

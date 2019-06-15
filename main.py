@@ -17,9 +17,9 @@ loop = asyncio.get_event_loop()
 
 log = logging.getLogger()
 
-async def shutdown():
+def shutdown():
     from oscm.routes import vpn
-    await vpn.stop()
+    loop.run_until_complete(vpn.stop())
 
 
 if __name__ == '__main__':

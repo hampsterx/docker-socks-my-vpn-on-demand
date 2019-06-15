@@ -2,6 +2,7 @@ import threading
 import time
 import logging
 import signal
+import asyncio
 import os
 
 from functools import partial
@@ -14,7 +15,7 @@ def shutdown(wait_seconds, before_shutdown, _signo, _stack_frame):
 
     if before_shutdown:
         log.debug("Calling before_shutdown function..")
-        await before_shutdown()
+        before_shutdown()
 
     thread = threading.Thread(target=lambda: time.sleep(wait_seconds))
     thread.start()

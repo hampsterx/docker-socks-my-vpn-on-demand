@@ -1,6 +1,6 @@
 python-dotenv==0.9.1
 async-timeout==3.0.1
-pydantic==0.21
+pydantic==1.6.2
 fastapi==0.11.0
 uvicorn==0.11.7
 asocks==0.1.0
